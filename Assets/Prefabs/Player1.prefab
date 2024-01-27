@@ -135,7 +135,6 @@ MonoBehaviour:
   moveSpeed: 5
   jumpForce: 5
   playerId: 1
-  life: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
