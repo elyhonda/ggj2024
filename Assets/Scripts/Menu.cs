@@ -46,14 +46,12 @@ public class Menu : MonoBehaviour
                 time[i] = 0;
                 playerStarted[i] = true;
                 UIselecao[i].SetActive(false);
-                UIgridTexto[i].SetActive(true);
                 UIpersonagem[i].SetActive(true);
                 UIjogador[i].SetActive(true);
             }
             else
             {
                 SelectCharacter(i+1.ToString() + "P", i);
-                UIgridTexto[i].SetActive(false);
                 UIpersonagem[i].SetActive(true);
                 UIjogador[i].SetActive(true);
                 mask[i].SetActive(true);
