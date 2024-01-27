@@ -23,7 +23,7 @@ public class BallKill : MonoBehaviour
         if (other.tag == "Player")
         {
             // Call a function to kill the player
-            other.SetActive(false);
+            //other.SetActive(false);
         }
     }
 }

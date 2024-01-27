@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1512596764609146428, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4620d7b91e74d7d4ba7a7bc48b9bceef, type: 2}
     - target: {fileID: 7977660444695133219, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
       propertyPath: m_Name
-      value: Player1
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 9023780002887303527, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
-    private float groundCheckRadius = 1f;
+    private float groundCheckRadius = 1.2f;
     public LayerMask groundLayer;
     private bool m_isAxisInUse = false;
 
@@ -32,6 +32,15 @@ public class Movement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal" + playerId);
         Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         rb.velocity = moveVelocity;
+        
+        if(Input.GetAxisRaw("Horizontal" + playerId) > 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if(Input.GetAxisRaw("Horizontal" + playerId) < 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     void Jump()
@@ -60,4 +69,6 @@ public class Movement : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    
+
 }
