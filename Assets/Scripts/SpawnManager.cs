@@ -29,4 +29,9 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForSeconds(ballSpawnTime);
         }
     }
+
+    public void StopSpawning()
+    {
+        stopSpawning = true;
+    }
 }
