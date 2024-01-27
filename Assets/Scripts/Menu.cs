@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Menu : MonoBehaviour
 
     public List<string> selectedCharacter = new List<string>();
 
-    public List<string> startedCharacter = new List<string>();
+    public static List<string> startedCharacter = new List<string>();
 
     public PlayerCharacter player1, player2, player3, player4;
 
@@ -87,9 +88,13 @@ public class Menu : MonoBehaviour
         }
 
 
-        if(Input.GetButtonDown("T"))
+        if(Input.GetKeyDown("t"))
         {
             Ready();
+        }
+        if(Input.GetKeyDown("r"))
+        {
+            Reset();
         }
     }
 
@@ -119,5 +124,11 @@ public class Menu : MonoBehaviour
             } 
             index++;
         }
+        SceneManager.LoadScene("MiniGame1");
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

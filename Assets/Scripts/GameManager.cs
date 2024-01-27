@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class GameManager : MonoBehaviour
     private SpawnManager spawnManager2;
     private SpawnManager spawnManager3;
     private SpawnManager spawnManager4;
-
     // Start is called before the first frame update
     void Start()
     {
+
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
         spawnManager2 = GameObject.Find("Spawner_2").GetComponent<SpawnManager>();
         spawnManager3 = GameObject.Find("Spawner_3").GetComponent<SpawnManager>();
@@ -33,7 +34,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown("r"))
+        {
+            Reset();
+        }
     }
 
     public void PlayerDead()
@@ -48,5 +52,9 @@ public class GameManager : MonoBehaviour
             spawnManager4.StopSpawning();
         }
     }
-
+    
+    public void Reset()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
