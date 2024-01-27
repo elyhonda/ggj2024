@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,17 +9,17 @@ public class Movement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public string playerId;
-    public int life = 1;
-
     private Rigidbody2D rb;
     private bool isGrounded;
     private float groundCheckRadius = 1.2f;
     public LayerMask groundLayer;
     private bool m_isAxisInUse = false;
+    private GameManager gameManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
@@ -63,12 +64,31 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-    }
-    
+    }  
     public void Death()
     {
-        gameObject.SetActive(false);
+        switch (int.Parse(playerId))
+        {
+            case 1:
+                gameManager.isPlayer1Dead = true;
+                gameManager.PlayerDead();
+                Destroy(this.gameObject);
+                break;
+            case 2:
+                gameManager.isPlayer2Dead = true;
+                gameManager.PlayerDead();
+                Destroy(this.gameObject);
+                break;
+            case 3:
+                gameManager.isPlayer3Dead = true;
+                gameManager.PlayerDead();
+                Destroy(this.gameObject);        
+                break;
+            case 4:
+                gameManager.isPlayer4Dead = true;
+                gameManager.PlayerDead();
+                Destroy(this.gameObject);
+                break;
+        }
     }
-    
-
-}
+}  

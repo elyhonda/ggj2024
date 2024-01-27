@@ -14,16 +14,25 @@ public class BallKill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2( speed, transform.position.y);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the collided object is the player
         if (other.tag == "Player")
         {
-            // Call a function to kill the player
-            //other.SetActive(false);
+            Movement movement = other.transform.GetComponent<Movement>();
+
+            if(movement != null)
+            {
+                movement.Death();
+            }
+        }
+
+        if (other.tag == "Wall")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
