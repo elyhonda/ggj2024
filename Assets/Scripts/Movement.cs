@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof (Rigidbody2D))]
-public class Movement : MonoBehaviour {
-    [SerializedField] private float moveSpeed = 5f;
-    [SerializedField] private float jumpForce = 10f;
-    [SerializedField] private string playerId;
-    [SerializedField] private int life = 1;
+public class Movement : MonoBehaviour 
+{
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public string playerId;
+    public int life = 1;
 
     private Rigidbody2D rb;
     private bool isGrounded;
