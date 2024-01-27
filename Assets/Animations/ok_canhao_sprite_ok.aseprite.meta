@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: ee516e2a5de0e96418c5e8469243ee86
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: ok_canhao_sprite_ok_Frame_0
+    originalName: 
+    pivot: {x: 0.4814815, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 439
+      width: 81
+      height: 64
+    spriteID: 0041fa952f31e59439dc731c9fbe3feb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 439}
+  - name: ok_canhao_sprite_ok_Frame_1
+    originalName: 
+    pivot: {x: 0.46428573, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 4
+      width: 84
+      height: 75
+    spriteID: 3ea3ecdefa8e3e4458e987bbb5e3b265
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 4}
+  - name: ok_canhao_sprite_ok_Frame_2
+    originalName: 
+    pivot: {x: 0.4457831, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 356
+      width: 83
+      height: 75
+    spriteID: 66eef2c738e7df246a12adc22ea3c1db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 356}
+  - name: ok_canhao_sprite_ok_Frame_3
+    originalName: 
+    pivot: {x: 0.43209875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 87
+      width: 81
+      height: 75
+    spriteID: 95a00bba5929b6e4fa047a315e9c9941
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 87}
+  - name: ok_canhao_sprite_ok_Frame_4
+    originalName: 
+    pivot: {x: 0.4177215, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 170
+      width: 79
+      height: 75
+    spriteID: df3baae4eef733a4fb170be802f43957
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 170}
+  - name: ok_canhao_sprite_ok_Frame_5
+    originalName: 
+    pivot: {x: 0.43209875, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 271
+      width: 81
+      height: 77
+    spriteID: 943327fac402d3b45af442727395e0f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 271}
+  - name: ok_canhao_sprite_ok_Frame_6
+    originalName: 
+    pivot: {x: 0.4216867, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 83
+      height: 81
+    spriteID: 9b725f2403d19f244becf1d64614c6c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: ok_canhao_sprite_ok_Frame_7
+    originalName: 
+    pivot: {x: 0.41463417, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 93
+      width: 82
+      height: 81
+    spriteID: 462116c10de576143bd0fe01b08fdf04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 93}
+  - name: ok_canhao_sprite_ok_Frame_8
+    originalName: 
+    pivot: {x: 0.4375, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 182
+      width: 80
+      height: 81
+    spriteID: d2d93bf7ab3620c419587cc64d96794b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 182}
+  - name: ok_canhao_sprite_ok_Frame_9
+    originalName: 
+    pivot: {x: 0.4545454, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 253
+      width: 77
+      height: 73
+    spriteID: 094f7ae25456290469e94d82bc1c6983
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 253}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -749771208
+    name: ok_canhao_sprite_ok
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: ok_canhao_sprite_ok_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 9
+        y: 0
+        width: 81
+        height: 64
+      spriteId: 0041fa952f31e59439dc731c9fbe3feb
+    - name: ok_canhao_sprite_ok_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 9
+        y: 0
+        width: 84
+        height: 75
+      spriteId: 3ea3ecdefa8e3e4458e987bbb5e3b265
+    - name: ok_canhao_sprite_ok_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 11
+        y: 0
+        width: 83
+        height: 75
+      spriteId: 66eef2c738e7df246a12adc22ea3c1db
+    - name: ok_canhao_sprite_ok_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 13
+        y: 0
+        width: 81
+        height: 75
+      spriteId: 95a00bba5929b6e4fa047a315e9c9941
+    - name: ok_canhao_sprite_ok_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 15
+        y: 0
+        width: 79
+        height: 75
+      spriteId: df3baae4eef733a4fb170be802f43957
+    - name: ok_canhao_sprite_ok_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 13
+        y: 0
+        width: 81
+        height: 77
+      spriteId: 943327fac402d3b45af442727395e0f6
+    - name: ok_canhao_sprite_ok_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 13
+        y: 0
+        width: 83
+        height: 81
+      spriteId: 9b725f2403d19f244becf1d64614c6c8
+    - name: ok_canhao_sprite_ok_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 14
+        y: 0
+        width: 82
+        height: 81
+      spriteId: 462116c10de576143bd0fe01b08fdf04
+    - name: ok_canhao_sprite_ok_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 13
+        y: 0
+        width: 80
+        height: 81
+      spriteId: d2d93bf7ab3620c419587cc64d96794b
+    - name: ok_canhao_sprite_ok_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 13
+        y: 0
+        width: 77
+        height: 73
+      spriteId: 094f7ae25456290469e94d82bc1c6983
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 96, y: 96}

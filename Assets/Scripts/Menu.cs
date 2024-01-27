@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
 
     public List<string> selectedCharacter = new List<string>();
 
-    public static List<string> startedCharacter = new List<string>();
+    public List<string> startedCharacter = new List<string>();
 
     public PlayerCharacter player1, player2, player3, player4;
 
@@ -129,6 +129,6 @@ public class Menu : MonoBehaviour
 
     public void Reset()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Reset");
     }
 }
