@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 5598053894995975656}
   - component: {fileID: 8444497469635758862}
   m_Layer: 5
-  m_Name: Personagem
+  m_Name: UIpersonagem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 4099255814713524372}
   - component: {fileID: 7291361016832042759}
   m_Layer: 5
-  m_Name: Grid
+  m_Name: UIgrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 1489173376776465940}
   - component: {fileID: 3190903381676603155}
   m_Layer: 5
-  m_Name: Jogador
+  m_Name: UIjogador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 1277434828241290792}
   - component: {fileID: 4257114911975935738}
   m_Layer: 5
-  m_Name: Selecao
+  m_Name: UIselecao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
