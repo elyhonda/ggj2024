@@ -4,17 +4,28 @@ using UnityEngine;
 
 public class BallKill : MonoBehaviour
 {
-    public float speed = 0.2f;
+    public float speed = 0.8f;
+    [SerializeField]
+    float speedMultiplier = 1.05f;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
+
+    public void SpeedUp()
+    {
+        speed *= speedMultiplier;
+    }
+    public void SpeedDown()
+    {
+        speed = 0.8f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
