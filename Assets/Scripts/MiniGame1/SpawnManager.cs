@@ -10,7 +10,8 @@ public class SpawnManager : MonoBehaviour
     private GameObject ballContainer;
     public GameObject ballPrefab;
     
-    float ballSpawnTime = 5f;
+    float ballSpawnTime = 10f;
+    float gameStartTime = 5f;
     float canSpeedUp = -1f;
     float speedUpRate = 10f;
 
@@ -35,12 +36,12 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator Spawner()
     {
-        while(stopSpawning != true)
-        {
-            yield return new WaitForSeconds(ballSpawnTime);
-            GameObject newBall = Instantiate(ballPrefab, transform.position, Quaternion.identity);
-            newBall.transform.parent = ballContainer.transform;
-            yield return new WaitForSeconds(ballSpawnTime);
+        yield return new WaitForSeconds(gameStartTime);
+        while (stopSpawning != true)
+        {       
+          GameObject newBall = Instantiate(ballPrefab, transform.position, Quaternion.identity);
+          newBall.transform.parent = ballContainer.transform;
+          yield return new WaitForSeconds(ballSpawnTime);
         }
     }
 

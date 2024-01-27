@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof (Rigidbody2D))]
-public class Movement : MonoBehaviour 
+[RequireComponent(typeof(Rigidbody2D))]
+public class PlayerMG2 : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -33,12 +33,12 @@ public class Movement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal" + playerId);
         Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         rb.velocity = moveVelocity;
-        
-        if(Input.GetAxisRaw("Horizontal" + playerId) > 0)
+
+        if (Input.GetAxisRaw("Horizontal" + playerId) > 0)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
-        else if(Input.GetAxisRaw("Horizontal" + playerId) < 0)
+        else if (Input.GetAxisRaw("Horizontal" + playerId) < 0)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
@@ -46,52 +46,23 @@ public class Movement : MonoBehaviour
 
     void Jump()
     {
-        if( Input.GetAxisRaw("Jump" + playerId) != 0)
+        if (Input.GetAxisRaw("Jump" + playerId) != 0)
         {
-            if(m_isAxisInUse == false)
+            if (m_isAxisInUse == false)
             {
                 // Call your event function here.
                 m_isAxisInUse = true;
             }
         }
-        if( Input.GetAxisRaw("Jump" + playerId) <= 0)
+        if (Input.GetAxisRaw("Jump" + playerId) <= 0)
         {
             m_isAxisInUse = false;
-        }    
+        }
         isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
 
         if (isGrounded && m_isAxisInUse)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-    }  
-    public void Death()
-    {
-        if(gameManager != null)
-        {
-            switch (int.Parse(playerId))
-            {
-                case 1:
-                    gameManager.isPlayer1Dead = true;
-                    gameManager.PlayerDead();
-                    Destroy(this.gameObject);
-                    break;
-                case 2:
-                    gameManager.isPlayer2Dead = true;
-                    gameManager.PlayerDead();
-                    Destroy(this.gameObject);
-                    break;
-                case 3:
-                    gameManager.isPlayer3Dead = true;
-                    gameManager.PlayerDead();
-                    Destroy(this.gameObject);
-                    break;
-                case 4:
-                    gameManager.isPlayer4Dead = true;
-                    gameManager.PlayerDead();
-                    Destroy(this.gameObject);
-                    break;
-            }
-        }   
     }
-}  
+}
