@@ -34,6 +34,7 @@ public class Menu : MonoBehaviour
         selectedCharacter.Add("P");
         selectedCharacter.Add("P");
         selectedCharacter.Add("P");
+
     }
 
     void UpdateUI(int i)
