@@ -73,22 +73,22 @@ public class Movement : MonoBehaviour
             {
                 case 1:
                     gameManager.isPlayer1Dead = true;
-                    gameManager.PlayerDead();
+                    gameManager.PlayerDead(playerId);
                     Destroy(this.gameObject);
                     break;
                 case 2:
                     gameManager.isPlayer2Dead = true;
-                    gameManager.PlayerDead();
+                    gameManager.PlayerDead(playerId);
                     Destroy(this.gameObject);
                     break;
                 case 3:
                     gameManager.isPlayer3Dead = true;
-                    gameManager.PlayerDead();
+                    gameManager.PlayerDead(playerId);
                     Destroy(this.gameObject);
                     break;
                 case 4:
                     gameManager.isPlayer4Dead = true;
-                    gameManager.PlayerDead();
+                    gameManager.PlayerDead(playerId);
                     Destroy(this.gameObject);
                     break;
             }
