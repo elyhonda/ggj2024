@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
     void Move()
     {
         float moveInput = Input.GetAxisRaw("Horizontal" + playerId);
-        Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y * Time.deltaTime);
+        Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         rb.velocity = moveVelocity;
         
         if(Input.GetAxisRaw("Horizontal" + playerId) > 0)
