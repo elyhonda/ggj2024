@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class GameManager : MonoBehaviour
     private GameManagerUniversal gameManagerUniversal;
 
     public static List<int> ranking = new List<int>();
+
+
+    public GameObject winUI;
+    public RuntimeAnimatorController[] newController;
+    public GameObject[] personagemRank;
 
     // Start is called before the first frame update
     void Start()
@@ -84,21 +90,178 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        winUI.SetActive(true);
         if(!isPlayer1Dead)
         {
-            
+            personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+
+            if (ranking[0] == 2)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 2)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 3)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 3)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 4)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 4)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
         }
         else if(!isPlayer2Dead)
         {
+            personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
 
+            if (ranking[0] == 1)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 1)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 3)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 3)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 4)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 4)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
         }
         else if(!isPlayer3Dead)
         {
+            personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
 
+            if (ranking[0] == 1)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 1)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 2)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 2)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 4)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 4)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            }
         }
         else if(!isPlayer4Dead)
         {
+            personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[3] as RuntimeAnimatorController;
+            
+            if(ranking[0] == 1)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else if(ranking[1] == 1)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
+            }
 
+            if (ranking[0] == 2)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 2)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[1] as RuntimeAnimatorController;
+            }
+
+            if (ranking[0] == 3)
+            {
+                personagemRank[3].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else if (ranking[1] == 3)
+            {
+                personagemRank[2].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
+            else
+            {
+                personagemRank[1].GetComponent<Animator>().runtimeAnimatorController = newController[2] as RuntimeAnimatorController;
+            }
         }
     }
 }
