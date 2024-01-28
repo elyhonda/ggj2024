@@ -56,7 +56,6 @@ public class Menu : MonoBehaviour
                 UIpersonagem[i].SetActive(true);
                 UIjogador[i].SetActive(true);
                 mask[i].SetActive(true);
-
             }
         }
     }
