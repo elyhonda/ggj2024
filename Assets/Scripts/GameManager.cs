@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public RuntimeAnimatorController[] newController;
     public GameObject[] personagemRank;
 
+    public AudioSource audioVitoria, audio;
+    public AudioClip vitoria;
     // Start is called before the first frame update
     void Start()
     {
@@ -91,6 +93,8 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         winUI.SetActive(true);
+        audio.GetComponent<AudioSource>();
+        audioVitoria.PlayOneShot(vitoria, 1f);
         if(!isPlayer1Dead)
         {
             personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;
