@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public string playerId;
     private Rigidbody2D rb;
     private bool isGrounded;
-    private float groundCheckRadius = 1.2f;
+    private float groundCheckRadius = 0.9f;
     public LayerMask groundLayer;
     private bool m_isAxisInUse = false;
     private GameManager gameManager;
@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        animator = this.GetComponent<Animator>();
     }
 
     void Update()
@@ -63,8 +64,12 @@ public class Movement : MonoBehaviour
 
         if (isGrounded && m_isAxisInUse)
         {
+            animator.SetBool("Jump", true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            animator.SetBool("isJumping", true);
+        }
+        else if(!isGrounded)
+        {
+            animator.SetBool("Jump", false);
         }
     }  
     public void Death()
