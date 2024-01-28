@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     
     float ballSpawnTime = 10f;
     float gameStartTime = 5f;
-    float canSpeedUp = -1f;
+    float canSpeedUp = 2f;
     float speedUpRate = 10f;
 
     bool stopSpawning = false;
