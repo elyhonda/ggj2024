@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     private bool m_isAxisInUse = false;
     private GameManager gameManager;
-    public bool hasCrown = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,12 +57,14 @@ public class Movement : MonoBehaviour
         if( Input.GetAxisRaw("Jump" + playerId) <= 0)
         {
             m_isAxisInUse = false;
+ 
         }    
         isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
 
         if (isGrounded && m_isAxisInUse)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            animator.SetBool("isJumping", true);
         }
     }  
     public void Death()
