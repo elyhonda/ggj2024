@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
 
     private GameManagerUniversal gameManagerUniversal;
 
-    public List<int> ranking = new List<int>();
-    int count = 0;
+    public static List<int> ranking = new List<int>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,17 +45,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PlayerDead(string playerId)
+    public void PlayerDead()
     {
         deadCount++;
-        SetList(playerId);
+        
+        if(isPlayer1Dead)
+        {
+            ranking.Add(1);
+        }
+        else if(isPlayer2Dead)
+        {
+            ranking.Add(2);
+        }
+        else if(isPlayer3Dead)
+        {
+            ranking.Add(3);
+        }
+        else if(isPlayer4Dead)
+        {
+            ranking.Add(4);
+        }
+
         if(deadCount == 3)
         {
-            GameManagerUniversal.Instance.AddPoints(ranking[0], ranking[1], ranking[2], ranking[3]);
+            Time.timeScale = 0;
             spawnManager.StopSpawning();
             spawnManager2.StopSpawning();
             spawnManager3.StopSpawning();
             spawnManager4.StopSpawning();
+            Win();
         }
     }
     
@@ -64,9 +82,23 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Menu");
     }
 
-    public void SetList(string playerId)
+    public void Win()
     {
-        ranking.Add(int.Parse(playerId));
+        if(!isPlayer1Dead)
+        {
+            
+        }
+        else if(!isPlayer2Dead)
+        {
 
+        }
+        else if(!isPlayer3Dead)
+        {
+
+        }
+        else if(!isPlayer4Dead)
+        {
+
+        }
     }
 }

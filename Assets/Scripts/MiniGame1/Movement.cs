@@ -16,7 +16,6 @@ public class Movement : MonoBehaviour
     private bool m_isAxisInUse = false;
     private GameManager gameManager;
     public bool hasCrown = false;
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -74,25 +73,25 @@ public class Movement : MonoBehaviour
             {
                 case 1:
                     gameManager.isPlayer1Dead = true;
-                    gameManager.PlayerDead(playerId);
+                    gameManager.PlayerDead();
                     Destroy(this.gameObject);
                     break;
                 case 2:
                     gameManager.isPlayer2Dead = true;
-                    gameManager.PlayerDead(playerId);
+                    gameManager.PlayerDead();
                     Destroy(this.gameObject);
                     break;
                 case 3:
                     gameManager.isPlayer3Dead = true;
-                    gameManager.PlayerDead(playerId);
+                    gameManager.PlayerDead();
                     Destroy(this.gameObject);
                     break;
                 case 4:
                     gameManager.isPlayer4Dead = true;
-                    gameManager.PlayerDead(playerId);
+                    gameManager.PlayerDead();
                     Destroy(this.gameObject);
                     break;
             }
-        }   
+        }  
     }
 }  
