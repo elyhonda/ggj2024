@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
+
 
 public class Board : MonoBehaviour
 {
@@ -49,6 +51,7 @@ public class Board : MonoBehaviour
 
     public void GameOver()
     {
+        SceneManager.LoadScene("Menu");
         tilemap.ClearAllTiles();
 
         // Do anything else you want on game over here..

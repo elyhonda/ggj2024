@@ -24,8 +24,10 @@ public class Menu : MonoBehaviour
 
     public PlayerCharacter player1, player2, player3, player4;
 
+    public int count;
     private void Start()
     {
+        Time.timeScale = 1;
         isSelected.Add(false);
         isSelected.Add(false);
         isSelected.Add(false);
@@ -44,6 +46,7 @@ public class Menu : MonoBehaviour
         {
             if (!playerStarted[i])
             {
+                count++;
                 time[i] = 0;
                 playerStarted[i] = true;
                 UIselecao[i].SetActive(false);
@@ -123,7 +126,16 @@ public class Menu : MonoBehaviour
             } 
             index++;
         }
-        SceneManager.LoadScene("MiniGame1");
+        
+        if(count == 1)
+        {
+            SceneManager.LoadScene("Tetris");
+        }
+        else
+        {
+            SceneManager.LoadScene("MiniGame1");
+        }
+
     }
 
     public void Reset()

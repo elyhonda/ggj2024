@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Time.timeScale = 1;
         spawnManager = GameObject.Find("Spawner").GetComponent<SpawnManager>();
         spawnManager2 = GameObject.Find("Spawner_2").GetComponent<SpawnManager>();
         spawnManager3 = GameObject.Find("Spawner_3").GetComponent<SpawnManager>();
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     public void Win()
     {
         winUI.SetActive(true);
-        audio.GetComponent<AudioSource>();
+        audio.Stop();
         audioVitoria.PlayOneShot(vitoria, 1f);
         if(!isPlayer1Dead)
         {
