@@ -18,6 +18,10 @@ public class SpawnManager : MonoBehaviour
     bool stopSpawning = false;
     private BallKill ballScript;
 
+    public AudioSource audio;
+    public AudioClip canhao;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +42,15 @@ public class SpawnManager : MonoBehaviour
     {
         yield return new WaitForSeconds(gameStartTime);
         while (stopSpawning != true)
-        {       
-          GameObject newBall = Instantiate(ballPrefab, transform.position, Quaternion.identity);
-          newBall.transform.parent = ballContainer.transform;
-          yield return new WaitForSeconds(ballSpawnTime);
+        {
+            if (audio != null)
+            {
+                audio.PlayOneShot(canhao);
+            }
+            animator.SetTrigger("canhao");
+            GameObject newBall = Instantiate(ballPrefab, transform.position, Quaternion.identity);
+            newBall.transform.parent = ballContainer.transform;
+            yield return new WaitForSeconds(ballSpawnTime);
         }
     }
 

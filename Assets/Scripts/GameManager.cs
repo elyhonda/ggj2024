@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private GameManagerUniversal gameManagerUniversal;
 
     public static List<int> ranking = new List<int>();
-
+    public int[] rankingi;
 
     public GameObject winUI;
     public RuntimeAnimatorController[] newController;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(Input.GetKeyDown("r"))
         {
             Reset();
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
     
     public void Reset()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Main");
     }
 
     public void Win()
@@ -95,6 +96,11 @@ public class GameManager : MonoBehaviour
         winUI.SetActive(true);
         audio.Stop();
         audioVitoria.PlayOneShot(vitoria, 1f);
+
+        rankingi[0] = ranking[0];
+        rankingi[1] = ranking[1];
+        rankingi[2] = ranking[2];
+        rankingi[3] = ranking[3];
         if(!isPlayer1Dead)
         {
             personagemRank[0].GetComponent<Animator>().runtimeAnimatorController = newController[0] as RuntimeAnimatorController;

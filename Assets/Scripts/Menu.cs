@@ -90,7 +90,7 @@ public class Menu : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown("t"))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Ready();
         }
@@ -140,6 +140,6 @@ public class Menu : MonoBehaviour
 
     public void Reset()
     {
-        SceneManager.LoadScene("Reset");
+        SceneManager.LoadScene("Menu");
     }
 }
