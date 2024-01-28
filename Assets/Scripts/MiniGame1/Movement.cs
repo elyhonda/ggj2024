@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     private bool m_isAxisInUse = false;
     private GameManager gameManager;
+    public bool hasCrown = false;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class Movement : MonoBehaviour
     void Move()
     {
         float moveInput = Input.GetAxisRaw("Horizontal" + playerId);
-        Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y * Time.deltaTime);
         rb.velocity = moveVelocity;
         
         if(Input.GetAxisRaw("Horizontal" + playerId) > 0)
