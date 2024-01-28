@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 3e59066126fac01418cc760cea1d9267, type: 2}
+    - target: {fileID: 1512596764609146428, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f22cd51f1d70264dbdd6ffa6307acc7, type: 2}
     - target: {fileID: 2236626500751240661, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -80,7 +84,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1512596764609146428, guid: 4ccdcc5c7dce19b4aa2c5e70187c9272, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

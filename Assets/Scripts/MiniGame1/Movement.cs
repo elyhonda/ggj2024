@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent (typeof (Rigidbody2D))]
 public class Movement : MonoBehaviour 
 {
+    public Animator animator;
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public string playerId;
@@ -33,7 +34,7 @@ public class Movement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal" + playerId);
         Vector2 moveVelocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
         rb.velocity = moveVelocity;
-        
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
         if(Input.GetAxisRaw("Horizontal" + playerId) > 0)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
