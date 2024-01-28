@@ -129,7 +129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7977660444695133219}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a33e2fceb1ede74ab2af866833771f9, type: 3}
   m_Name: 
@@ -191,7 +191,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3e59066126fac01418cc760cea1d9267, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -201,7 +201,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1624523310450207871
 BoxCollider2D:
   m_ObjectHideFlags: 0
