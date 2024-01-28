@@ -21,7 +21,7 @@ public class BallKill : MonoBehaviour
 
     public void SpeedUp()
     {
-        speed *= speedMultiplier;
+        speed += 0.075f;
     }
     public void SpeedDown()
     {
